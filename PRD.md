@@ -92,9 +92,9 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 
 ## Informazioni sul documento ##
 Prodotto: ScuolaChill
-Team: CRM Romano
-Autori: Romano Cappelletto
-Versione: 1.0
+Team: Registro Romano
+Autori: _Romano Cappelletto_
+Versione: 1.0.2
 Data: 23.09.2026
 Stato: Bozza
 
@@ -104,14 +104,14 @@ Stato: Bozza
 
 
 ## Scopo e perimetro ##
-- Perchè esiste?
+- _Perchè esiste?_
 | Lato business: è un nuovo crm scolastico per questa istituzione. 
     Moderno e funzionale, contiene tutte le qualità dei crm più utilizzati e conosciuti, con delle funzionalità aggiunte proprio per distinguerla dal resto dei crm che ci sono nel mercato. 
     È stata creata per essere utilizzabile dal personale scolastico, quindi direttori e professori, e dagli studenti
 | Lato tecnico: ha lo scopo di coprire la maggior parte delle aree utilizzate e necessarie a un buon crm.
     Creazioni di profili degli utenti, classi, verifiche, assenze, è tutto incluso nel progetto in modo semplice ed efficente.
     È stato ovviamente anche preso in considerazione l'utilizzo da persone inesperte o con qualche disabilità.
-- Cosa è incluso? 
+- _Cosa è incluso?_ 
 | Gestione di classi, docenti e studenti da parte del Direttore
 | Gestione di studenti, verifiche, assenze e voti da parte dei Docenti
 | Gestione dei voti e delle comunicazioni da parte degli Studenti
@@ -119,32 +119,32 @@ Stato: Bozza
 | Parte grafica e schematica per quel che riguarda assenze, materie e voti
 | (da vedere in corso d'opera) Un chatbot da usare in caso di problemi o dubbi durante l'utilizzo del CRM
 | (da vedere in corso d'opera) Una parte di schemi che dia un feedback di cosa ha funzionato nelle lezioni e verifiche per aiutare i Docenti
-- Cosa non è incluso?
+- _Cosa non è incluso?_
 | Non gestisce le comunicazioni con le famiglie
 
 
 ## Stakeholder ##
 Stakeholder           | Cosa fa                            | Cosa gli interessa | Come lo coinvolgo
 ----------------------|------------------------------------|--------------------|-------------------------------------------
-- Direttore           | Crea utenti per docenti e studenti | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
+- _Direttore_         | Crea utenti per docenti e studenti | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Crea classi                        |                    |
                       | Compone classi                     |                    |
                       | Vede tutto                         |                    |
 ----------------------|------------------------------------|--------------------|-------------------------------------------
-- Docenti             | Carica materiale didattico         | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
+- _Docenti_           | Carica materiale didattico         | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Crea le proprie verifiche          |                    |
                       | Assegna i voti                     |                    |
                       | Vede i report del bot              |                    |
 ----------------------|------------------------------------|--------------------|-------------------------------------------
-- Studenti            | Consultare il materiale scolastico | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
+- _Studenti_          | Consultare il materiale scolastico | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Svolgere le verifiche              |                    |
                       | Consultare i voti                  |                    |
                       | Vede i report del bot              |                    |
 ----------------------|------------------------------------|--------------------|-------------------------------------------
-- Docente del corso   | Validare il PRD                    |                    | Chiedendogli come posso migliorare/consigli
+- _Docente del corso_ | Validare il PRD                    |                    | Chiedendogli come posso migliorare/consigli
 ----------------------|------------------------------------|--------------------|-------------------------------------------
-- Collaudatori del    | Usare ScuolaChill come utenti reali| Testare le funzioni| Chiedendo feedback
-  primo anno          |                                    |                    |
+- _Collaudatori del_  | Usare ScuolaChill come utenti reali| Testare le funzioni| Chiedendo feedback
+  _primo anno_        |                                    |                    |
 ----------------------------------------------------------------------------------------------------------------------------
 
 
