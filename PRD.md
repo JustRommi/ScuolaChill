@@ -89,13 +89,6 @@ Totale utenti	540
 
 E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 
-## Scenario	Utenti contemporanei da considerare
-Uso normale	30–80
-Periodo intenso	80–150
-Picco importante	150–250
-Stress test	300+
-
-
 
 ## Informazioni sul documento ##
 Prodotto: ScuolaChill
@@ -132,27 +125,27 @@ Stato: Bozza
 
 ## Stakeholder ##
 Stakeholder           | Cosa fa                            | Cosa gli interessa | Come lo coinvolgo
----------------------------------------------------------------------------------------------------
+----------------------|------------------------------------|--------------------|-------------------------------------------
 - Direttore           | Crea utenti per docenti e studenti | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Crea classi                        |                    |
                       | Compone classi                     |                    |
                       | Vede tutto                         |                    |
----------------------------------------------------------------------------------------------------
+----------------------|------------------------------------|--------------------|-------------------------------------------
 - Docenti             | Carica materiale didattico         | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Crea le proprie verifiche          |                    |
                       | Assegna i voti                     |                    |
                       | Vede i report del bot              |                    |
----------------------------------------------------------------------------------------------------
+----------------------|------------------------------------|--------------------|-------------------------------------------
 - Studenti            | Consultare il materiale scolastico | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
                       | Svolgere le verifiche              |                    |
                       | Consultare i voti                  |                    |
                       | Vede i report del bot              |                    |
----------------------------------------------------------------------------------------------------
+----------------------|------------------------------------|--------------------|-------------------------------------------
 - Docente del corso   | Validare il PRD                    |                    | Chiedendogli come posso migliorare/consigli
----------------------------------------------------------------------------------------------------
+----------------------|------------------------------------|--------------------|-------------------------------------------
 - Collaudatori del    | Usare ScuolaChill come utenti reali| Testare le funzioni| Chiedendo feedback
   primo anno          |                                    |                    |
----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 
 
 ## Destinatari e contesto d'uso ##
@@ -161,3 +154,14 @@ Numero di docenti: 25
 Numero di classi: 25
 Orario scolastico: 8:00-13:00 (lunedì-venerdì)
 Connettività: Wi-Fi scolastico condiviso, rete mobile degli studenti
+
+
+## Scenario	Utenti contemporanei da considerare
+Bassa attività:   100-150
+Uso normale:	  150-250
+Periodo intenso:  250-350
+Picco importante: 350–450
+Stress test	300+: 500+
+
+
+## Archetipi ##
