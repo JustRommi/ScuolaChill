@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.0.4
+Versione: 1.0.5
 Data: 23.09.2026
 Stato: Bozza
 
@@ -135,28 +135,26 @@ Stato: Bozza
 
 
 ## Stakeholder ##
-| Stakeholder           | Cosa fa                            | Cosa gli interessa | Come lo coinvolgo                         |
-----------------------|------------------------------------|--------------------|-------------------------------------------
-- _Direttore_         | Crea utenti per docenti e studenti | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
-                      | Crea classi                        |                    |
-                      | Compone classi                     |                    |
-                      | Vede tutto                         |                    |
-----------------------|------------------------------------|--------------------|-------------------------------------------
-- _Docenti_           | Carica materiale didattico         | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
-                      | Crea le proprie verifiche          |                    |
-                      | Assegna i voti                     |                    |
-                      | Vede i report del bot              |                    |
-----------------------|------------------------------------|--------------------|-------------------------------------------
-- _Studenti_          | Consultare il materiale scolastico | Poter fare tutto   | Chiedendogli cosa può fare nel crm attuale
-                      | Svolgere le verifiche              |                    |
-                      | Consultare i voti                  |                    |
-                      | Vede i report del bot              |                    |
-----------------------|------------------------------------|--------------------|-------------------------------------------
-- _Docente del corso_ | Validare il PRD                    |                    | Chiedendogli come posso migliorare/consigli
-----------------------|------------------------------------|--------------------|-------------------------------------------
-- _Collaudatori del_  | Usare ScuolaChill come utenti reali| Testare le funzioni| Chiedendo feedback
-  _primo anno_        |                                    |                    |
-----------------------------------------------------------------------------------------------------------------------------
+| Stakeholder         | Cosa fa                            | Cosa gli interessa                  | Come lo coinvolgo                         |
+----------------------|------------------------------------|-------------------------------------|-------------------------------------------
+- _Direttore_         | Crea utenti per docenti e studenti | Avere dati corretti e aggiornati,   | Intervista iniziale
+                      | Crea classi                        | controllare l’organizzazione        | Revisione dei requisiti
+                      | Compone classi                     | scolastica e ridurre il lavoro      | Collaudo
+                      | Vede tutto                         | manuale                             |
+----------------------|------------------------------------|-------------------------------------|-------------------------------------------
+- _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste
+                      | Crea le proprie verifiche          | didattiche e non perdere dati       | Prove delle funzionalità
+                      | Assegna i voti                     | durante il lavoro                   | Raccolta di feedback
+                      | Vede i report del bot              |                                     |
+----------------------|------------------------------------|-------------------------------------|-------------------------------------------
+- _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste
+                      | Svolgere le verifiche              | usare il sistema anche da tel.,     | Collaudo con studenti del primo anno
+                      | Consultare i voti                  | completare le verifiche e poter     |
+                      | Vede i report del bot              | consultare i propri voti            |
+----------------------|------------------------------------|-------------------------------------|-------------------------------------------
+- _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo
+                      |                                    |                                     | Revisione finale alla presentazione
+----------------------|------------------------------------|-------------------------------------|-------------------------------------------
 
 
 ## Destinatari e contesto d'uso ##
