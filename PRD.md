@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.0.3
+Versione: 1.0.4
 Data: 23.09.2026
 Stato: Bozza
 
@@ -105,22 +105,33 @@ Stato: Bozza
 
 ## Scopo e perimetro ##
 - _Perchè esiste?_
-| Lato business: è un nuovo crm scolastico per questa istituzione. 
-    Moderno e funzionale, contiene tutte le qualità dei crm più utilizzati e conosciuti, con delle funzionalità aggiunte proprio per distinguerla dal resto dei crm che ci sono nel mercato. 
-    È stata creata per essere utilizzabile dal personale scolastico, quindi direttori e professori, e dagli studenti
-| Lato tecnico: ha lo scopo di coprire la maggior parte delle aree utilizzate e necessarie a un buon crm.
-    Creazioni di profili degli utenti, classi, verifiche, assenze, è tutto incluso nel progetto in modo semplice ed efficente.
+| Lato business: 
+    ScuolaChill è un gestionale scolastico pensato per semplificare le attività quotidiane di direzione, docenti e studenti. 
+    Riunisce in un’unica piattaforma la gestione degli utenti e delle classi, la distribuzione del materiale didattico, lo svolgimento delle verifiche e la consultazione dei voti
+| Lato tecnico: 
+    Il sistema comprende un’applicazione web accessibile da computer e smartphone, attraverso la quale gli utenti autenticati possono utilizzare funzionalità differenti in base al proprio ruolo. 
+    Il sistema gestisce utenti, classi, materiali didattici, verifiche e voti, garantendo sicurezza, semplicità d’uso e affidabilità
     È stato ovviamente anche preso in considerazione l'utilizzo da persone inesperte o con qualche disabilità.
 - _Cosa è incluso?_ 
-| Gestione di classi, docenti e studenti da parte del Direttore
-| Gestione di studenti, verifiche, assenze e voti da parte dei Docenti
-| Gestione dei voti e delle comunicazioni da parte degli Studenti
-| Frontend e Backend del CRM
-| Parte grafica e schematica per quel che riguarda assenze, materie e voti
-| (da vedere in corso d'opera) Un chatbot da usare in caso di problemi o dubbi durante l'utilizzo del CRM
-| (da vedere in corso d'opera) Una parte di schemi che dia un feedback di cosa ha funzionato nelle lezioni e verifiche per aiutare i Docenti
+    Creazione e gestione degli account di docenti e studenti da parte del Direttore.
+    Creazione delle classi e assegnazione degli studenti alle classi.
+    Consultazione complessiva dei dati scolastici da parte del Direttore.
+    Caricamento e consultazione del materiale didattico.
+    Creazione e gestione delle verifiche.
+    Svolgimento online delle verifiche da parte degli studenti.
+    Assegnazione dei voti da parte dei docenti.
+    Consultazione dei propri voti da parte degli studenti.
+    Gestione dell’autenticazione e delle autorizzazioni in base al ruolo.
+    Interfaccia web utilizzabile da computer e smartphone.
 - _Cosa non è incluso?_
-| Non gestisce le comunicazioni con le famiglie
+    Gestione delle assenze, dei ritardi e delle giustificazioni. (da vedere in corso d'opera)
+    Comunicazioni con le famiglie.
+    Pagelle e documenti scolastici ufficiali.
+    Gestione di pagamenti, tasse o rette scolastiche.
+    Gestione dell’orario delle lezioni. (da vedere in corso d'opera)
+    Chatbot di assistenza. (da vedere in corso d'opera)
+    Analisi automatica dell’efficacia delle lezioni e delle verifiche.
+    Applicazioni native per Android e iOS.
 
 
 ## Stakeholder ##
