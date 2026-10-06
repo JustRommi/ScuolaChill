@@ -137,24 +137,23 @@ Stato: Bozza
 ## Stakeholder ##
 | Stakeholder          | Cosa fa                            | Cosa gli interessa                  | Come lo coinvolgo                         |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
-|- _Direttore_         | Crea utenti per docenti e studenti | Avere dati corretti e aggiornati,   | Intervista iniziale                       |
+|  _Direttore_         | Crea utenti per docenti e studenti | Avere dati corretti e aggiornati,   | Intervista iniziale                       |
 |                      | Crea classi                        | controllare l’organizzazione        | Revisione dei requisiti                   |
 |                      | Compone classi                     | scolastica e ridurre il lavoro      | Collaudo                                  |
 |                      | Vede tutto                         | manuale                             |                                           |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
-|- _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste                                |
+|  _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste                                |
 |                      | Crea le proprie verifiche          | didattiche e non perdere dati       | Prove delle funzionalità                  |
 |                      | Assegna i voti                     | durante il lavoro                   | Raccolta di feedback                      |
 |                      | Vede i report del bot              |                                     |                                           |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
-|- _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste                                |
+|  _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste                                |
 |                      | Svolgere le verifiche              | usare il sistema anche da tel.,     | Collaudo con studenti del primo anno      |
 |                      | Consultare i voti                  | completare le verifiche e poter     |                                           |
 |                      | Vede i report del bot              | consultare i propri voti            |                                           |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
-|- _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo  |
+|  _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo  |
 |                      |                                    |                                     | Revisione finale alla presentazione       |
-|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
 
 
 ## Destinatari e contesto d'uso ##
@@ -174,18 +173,18 @@ Stress test	300+: 500+
 
 
 ## Archetipi ##
-ID            | Archetipo   | Contesto d'uso                                                 | Competenze digitali                                             | Dispositivo principale  | Frequenza d'uso          |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
-- _ARC-001_   | Direttore   | Usa il registro per consultare, creare, modificare o eliminare | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Quotidianamente durante  |
-              |             | dati e informazioni relativi a classi, docenti e studenti      | competenze avanzate nella comprensione dei dati e informazioni, |                         | l'orario scolastico      |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| - _ARC-002_   | Docente     | Usa il registro per monitorare l'andamento degli studenti,     | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Più volte durante la     | 
-              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         | giornata scolastica      |
-              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
-- _ARC-003_   | Stundente   | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
-              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
-              |             | e fare le verifiche                                            |                                                                 |                         |                          |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+|ID            | Archetipo   | Contesto d'uso                                                 | Competenze digitali                                             | Dispositivo principale  | Frequenza d'uso          |
+|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+|  _ARC-001_   | Direttore   | Usa il registro per consultare, creare, modificare o eliminare | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Quotidianamente durante  |
+|              |             | dati e informazioni relativi a classi, docenti e studenti      | competenze avanzate nella comprensione dei dati e informazioni, |                         | l'orario scolastico      |
+|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| 
+|  _ARC-002_   | Docente     | Usa il registro per monitorare l'andamento degli studenti,     | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Più volte durante la     | 
+|              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         | giornata scolastica      |
+|              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
+|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+|  _ARC-003_   | Stundente   | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
+|              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
+|              |             | e fare le verifiche                                            |                                                                 |                         |                          |
 
 ## Panoramica e casi d'uso ##
 _ScuolaChill in poche righe_
@@ -194,7 +193,7 @@ _ScuolaChill in poche righe_
   controllare i propri risultati. Ogni utente visualizza solamente le informazioni e le funzionalità consentite dal proprio ruolo. 
   L’interfaccia è progettata per essere semplice da utilizzare sia da computer sia da smartphone.
 _User flow e scenari_
-| _DIR-03 · Creare e comporre una classe_
+| _DIR-03 · Creare e comporre una classe_ |
   - User flow
     1. Il Direttore accede a ScuolaChill.
     2. Apre la sezione dedicata alle classi.
@@ -212,7 +211,7 @@ _User flow e scenari_
     | Se uno studente appartiene già a un’altra classe, il sistema chiede al Direttore se desidera trasferirlo.
     | Se mancano dati obbligatori, il sistema indica i campi da completare.
     | Se il salvataggio non riesce, nessuna modifica parziale viene applicata e il Direttore può riprovare.
-| _DOC-02 · Creare e pubblicare una verifica_
+| _DOC-02 · Creare e pubblicare una verifica_ |
   - User flow
     1. Il docente accede a ScuolaChill.
     2. Apre la sezione dedicata alle verifiche.
@@ -230,7 +229,7 @@ _User flow e scenari_
     | Se la scadenza è precedente alla data di apertura, il sistema richiede di correggere le date.
     | Se il docente non insegna nella classe selezionata, il sistema non consente di assegnarle la verifica.
     | Se almeno uno studente ha già iniziato la verifica, il docente non può modificare le domande o il punteggio, ma può correggere solamente le informazioni che non alterano lo svolgimento.
-| _STU-02 · Svolgere e consegnare una verifica_
+| _STU-02 · Svolgere e consegnare una verifica_ |
   - User flow
     1. Lo studente accede a ScuolaChill.
     2. Apre la sezione dedicata alle verifiche.
