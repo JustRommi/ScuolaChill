@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.0.5
+Versione: 1.0.6
 Data: 23.09.2026
 Stato: Bozza
 
@@ -174,16 +174,15 @@ Stress test	300+: 500+
 
 
 ## Archetipi ##
-ID            | Archetipo   | Contesto d'uso                                                 | Competenze digitali                                             | Dispositivo principale  | Frequenza d'uso   |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|-------------------|
-- _ARC-001_   | Direttore   | Usa il registro per consultare, creare, modificare o eliminare | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Orario scolastico |
-              |             | dati e informazioni relativi a classi, docenti e studenti      | competenze avanzate nella comprensione dei dati e informazioni, |                         |                   |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|-------------------|         
-- _ARC-002_   | Docente     | Usa il registro per monitorare l'andamento degli studenti,     | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Orario scolastico | 
-              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         |                   |
-              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                   |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|-------------------|
-- _ARC-003_   | Stundente   | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Orario scolastico |
-              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      |                   |
-              |             | e fare le verifiche                                            |                                                                 |                         |                   |
---------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|-------------------|
+ID            | Archetipo   | Contesto d'uso                                                 | Competenze digitali                                             | Dispositivo principale  | Frequenza d'uso          |
+--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+- _ARC-001_   | Direttore   | Usa il registro per consultare, creare, modificare o eliminare | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Quotidianamente durante  |
+              |             | dati e informazioni relativi a classi, docenti e studenti      | competenze avanzate nella comprensione dei dati e informazioni, |                         | l'orario scolastico      |
+--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| - _ARC-002_   | Docente     | Usa il registro per monitorare l'andamento degli studenti,     | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Più volte durante la     | 
+              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         | giornata scolastica      |
+              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
+--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+- _ARC-003_   | Stundente   | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
+              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
+              |             | e fare le verifiche                                            |                                                                 |                         |                          |
+--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
