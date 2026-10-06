@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.1.0
+Versione: 1.1.1
 Data: 23.09.2026
 Stato: Bozza
 
@@ -113,7 +113,7 @@ Stato: Bozza
 | Lato tecnico: 
     Il sistema comprende un’applicazione web accessibile da computer e smartphone, attraverso la quale gli utenti autenticati possono utilizzare funzionalità differenti in base al proprio ruolo. 
     Il sistema gestisce utenti, classi, materiali didattici, verifiche e voti, garantendo sicurezza, semplicità d’uso e affidabilità
-    È stato ovviamente anche preso in considerazione l'utilizzo da persone inesperte o con qualche disabilità.
+    L’interfaccia viene progettata per essere semplice e comprensibile anche per utenti con competenze digitali limitate.
 
 - _Cosa è incluso?_ 
     Creazione e gestione degli account di docenti e studenti da parte del Direttore.
@@ -149,12 +149,10 @@ Stato: Bozza
 |  _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste                                |
 |                      | Crea le proprie verifiche          | didattiche e non perdere dati       | Prove delle funzionalità                  |
 |                      | Assegna i voti                     | durante il lavoro                   | Raccolta di feedback                      |
-|                      | Vede i report del bot              |                                     |                                           |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
 |  _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste                                |
 |                      | Svolgere le verifiche              | usare il sistema anche da tel.,     | Collaudo con studenti del primo anno      |
 |                      | Consultare i voti                  | completare le verifiche e poter     |                                           |
-|                      | Vede i report del bot              | consultare i propri voti            |                                           |
 |----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
 |  _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo  |
 |                      |                                    |                                     | Revisione finale alla presentazione       |
@@ -186,7 +184,7 @@ Stress test	300+: 500+
 |              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         | giornata scolastica      |
 |              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
 |--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
-|  _ARC-003_   | Stundente   | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
+|  _ARC-003_   | Studente    | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
 |              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
 |              |             | e fare le verifiche                                            |                                                                 |                         |                          |
 
@@ -253,7 +251,7 @@ _User flow e scenari_
   Durante una lezione, lo studente apre la verifica assegnata dal docente, legge le istruzioni e risponde alle domande. Dopo aver controllato le risposte, conferma la consegna entro il tempo disponibile. Il sistema registra la verifica e mostra data e ora dell’avvenuta consegna.
   - Scenari alternativi.
     | Se la connessione si interrompe, le risposte già salvate vengono conservate e lo studente può riprendere la verifica quando la connessione torna disponibile.
-    | Se la scadenza viene raggiunta durante lo svolgimento, il sistema salva e consegna automaticamente le risposte presenti.
+    | Se la scadenza viene raggiunta durante lo svolgimento, il sistema impedisce ulteriori modifiche e informa lo studente che il tempo disponibile è terminato.
     | Se lo studente prova ad aprire la verifica prima della data prevista o dopo la scadenza, il sistema non consente di iniziarla.
     | Dopo la consegna, lo studente non può modificare le risposte né iniziare un secondo tentativo.
 
@@ -290,7 +288,7 @@ _User flow e scenari_
 |        |                         | Dato che almeno uno studente ha iniziato la verifica, quando il docente tenta di         |                                            |
 |        |                         | modificare domande o punteggi, allora il sistema impedisce la modifica.                  |                                            |
 | - - - -| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -| - - - - - - - - - - - - - - - - - - - - - -|
-|DOC-03  | Creare classi e comporle| Dato che il docente sta correggendo una verifica, quando inserisce un voto non valido,   | Il voto segue la scala definita nei        |
+|DOC-03  | Assegnare i voti        | Dato che il docente sta correggendo una verifica, quando inserisce un voto non valido,   | Il voto segue la scala definita nei        |
 |        |                         | allora il sistema impedisce il salvataggio.                                              | requisiti funzionali,                      | 
 |        |                         | Dato che un voto è già stato pubblicato, quando il docente lo modifica, allora il        | Un voto non pubblicato non è visibile allo |
 |        |                         | sistema registra la nuova valutazione e la data della modifica.                          | studente                                   |
@@ -303,7 +301,7 @@ _User flow e scenari_
 |STU-02  | Svolgere una verifica   | Dato che lo studente sta svolgendo una verifica, quando la connessione si interrompe,    | È consentito un solo tentativo,            |
 |        |                         | allora le risposte già salvate vengono conservate.                                       | Durante lo svolgimento le risposte vengono |
 |        |                         | Dato che viene raggiunta la scadenza, quando la verifica è ancora aperta, allora il      | salvate automaticamente                    |
-|        |                         | sistema consegna automaticamente le risposte presenti.                                   |                                            |
+|        |                         | sistema impedisce allo studente di inserire o modificare altre risposte.                 |                                            |
 |        |                         | Dato che la verifica è già stata consegnata, quando lo studente prova a riaprirla,       |                                            |
 |        |                         | allora non può modificare le risposte.                                                   |                                            |
 | - - - -| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -| - - - - - - - - - - - - - - - - - - - - - -|
@@ -312,3 +310,42 @@ _User flow e scenari_
 |        |                         | Dato che un voto non è ancora stato pubblicato, quando lo studente consulta le           | I risultati possono essere filtrati per    |
 |        |                         | valutazioni, allora il voto non viene mostrato.                                          | materia.                                   |
 |--------|-------------------------|------------------------------------------------------------------------------------------|--------------------------------------------|
+
+## Le decisioni lasciate aperte dalla traccia ##
+
+_FR-VOT-01 - scala dei voti_ (collegato a DOC-03 e STU-03)
+
+I voti sono numerici e vanno da 1 a 10, estremi compresi. 
+Sono ammessi voti interi e mezzi voti, per esempio 6, 6,5 e 7. Non sono ammessi simboli come “+” e “−”. 
+Il sistema impedisce il salvataggio di valori non validi.
+Motivazione: una scala semplice e uniforme facilita l’inserimento e la consultazione dei voti.
+
+_FR-CLA-01 - Trasferimento di uno studente_ (collegato a DIR-03)
+
+Il Direttore può trasferire uno studente da una classe a un’altra. 
+Lo studente viene rimosso dalla classe precedente e assegnato a quella nuova. 
+I voti già ricevuti vengono conservati e rimangono consultabili dallo studente e dal Direttore.
+Motivazione: il trasferimento deve essere possibile senza cancellare i risultati già ottenuti.
+
+_FR-VER-01 - Modifica di una verifica_ (collegato a DOC-02)
+Il docente può modificare liberamente una verifica finché nessuno studente l’ha iniziata. 
+Dopo l’inizio della prima compilazione, domande, risposte e punteggi non possono più essere modificati.
+Motivazione: tutti gli studenti devono svolgere la stessa verifica nelle stesse condizioni.
+
+_FR-VER-02 - Perdita della connessione durante una verifica_ (collegato a STU-02)
+Le risposte vengono salvate durante lo svolgimento della verifica. 
+Se la connessione si interrompe, le risposte già salvate vengono conservate. 
+Lo studente deve ristabilire la connessione e riaprire la verifica prima della scadenza per continuare. Le risposte non ancora salvate potrebbero dover essere inserite nuovamente.
+Motivazione: questa soluzione limita la perdita di dati senza richiedere una modalità offline completa.
+
+_FR-EMAIL-01 - Fallimento dell’invio delle credenziali_ (collegato a DIR-01 e DIR-02)
+Se il servizio email non risponde, l’account viene comunque creato. 
+Il sistema informa il Direttore che l’invio non è riuscito e mette a disposizione un comando per riprovare manualmente.
+Motivazione: un problema del servizio email non deve obbligare il Direttore a creare nuovamente l’account.
+
+(Altra decisione individuata dal team)
+
+_FR-VER-03 - Numero di tentativi_ (collegato a STU-02)
+Ogni studente può effettuare un solo tentativo per ciascuna verifica. 
+Dopo la consegna, le risposte non possono più essere modificate.
+Motivazione: la regola è semplice da comprendere e garantisce le stesse condizioni a tutti gli studenti.
