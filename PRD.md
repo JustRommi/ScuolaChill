@@ -193,7 +193,8 @@ _ScuolaChill in poche righe_
   controllare i propri risultati. Ogni utente visualizza solamente le informazioni e le funzionalità consentite dal proprio ruolo. 
   L’interfaccia è progettata per essere semplice da utilizzare sia da computer sia da smartphone.
 _User flow e scenari_
-| _DIR-03 · Creare e comporre una classe_ |
+
+1. _DIR-03 · Creare e comporre una classe_ 
   - User flow
     1. Il Direttore accede a ScuolaChill.
     2. Apre la sezione dedicata alle classi.
@@ -211,7 +212,8 @@ _User flow e scenari_
     | Se uno studente appartiene già a un’altra classe, il sistema chiede al Direttore se desidera trasferirlo.
     | Se mancano dati obbligatori, il sistema indica i campi da completare.
     | Se il salvataggio non riesce, nessuna modifica parziale viene applicata e il Direttore può riprovare.
-| _DOC-02 · Creare e pubblicare una verifica_ |
+
+2. _DOC-02 · Creare e pubblicare una verifica_ 
   - User flow
     1. Il docente accede a ScuolaChill.
     2. Apre la sezione dedicata alle verifiche.
@@ -229,7 +231,8 @@ _User flow e scenari_
     | Se la scadenza è precedente alla data di apertura, il sistema richiede di correggere le date.
     | Se il docente non insegna nella classe selezionata, il sistema non consente di assegnarle la verifica.
     | Se almeno uno studente ha già iniziato la verifica, il docente non può modificare le domande o il punteggio, ma può correggere solamente le informazioni che non alterano lo svolgimento.
-| _STU-02 · Svolgere e consegnare una verifica_ |
+
+3. _STU-02 · Svolgere e consegnare una verifica_ 
   - User flow
     1. Lo studente accede a ScuolaChill.
     2. Apre la sezione dedicata alle verifiche.
