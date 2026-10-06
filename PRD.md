@@ -187,11 +187,13 @@ Stress test	300+: 500+
 |              |             | e fare le verifiche                                            |                                                                 |                         |                          |
 
 ## Panoramica e casi d'uso ##
+
 _ScuolaChill in poche righe_
-| ScuolaChill è una piattaforma scolastica che raccoglie in un unico ambiente le attività principali di direzione, docenti e studenti. Il Direttore può creare gli account, organizzare le classi 
-  e consultare i dati dell’istituto. I docenti possono distribuire materiale didattico, preparare verifiche e assegnare voti. Gli studenti possono consultare i materiali, svolgere le verifiche e 
-  controllare i propri risultati. Ogni utente visualizza solamente le informazioni e le funzionalità consentite dal proprio ruolo. 
-  L’interfaccia è progettata per essere semplice da utilizzare sia da computer sia da smartphone.
+ScuolaChill è una piattaforma scolastica che raccoglie in un unico ambiente le attività principali di direzione, docenti e studenti. Il Direttore può creare gli account, organizzare le classi 
+e consultare i dati dell’istituto. I docenti possono distribuire materiale didattico, preparare verifiche e assegnare voti. Gli studenti possono consultare i materiali, svolgere le verifiche e 
+controllare i propri risultati. Ogni utente visualizza solamente le informazioni e le funzionalità consentite dal proprio ruolo. 
+L’interfaccia è progettata per essere semplice da utilizzare sia da computer sia da smartphone.
+
 _User flow e scenari_
 
 1. _DIR-03 · Creare e comporre una classe_ 
