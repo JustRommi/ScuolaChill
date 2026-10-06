@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.0.6
+Versione: 1.0.7
 Data: 23.09.2026
 Stato: Bozza
 
@@ -135,26 +135,26 @@ Stato: Bozza
 
 
 ## Stakeholder ##
-| Stakeholder         | Cosa fa                            | Cosa gli interessa                  | Come lo coinvolgo                         |
-----------------------|------------------------------------|-------------------------------------|-------------------------------------------
-- _Direttore_         | Crea utenti per docenti e studenti | Avere dati corretti e aggiornati,   | Intervista iniziale
-                      | Crea classi                        | controllare l’organizzazione        | Revisione dei requisiti
-                      | Compone classi                     | scolastica e ridurre il lavoro      | Collaudo
-                      | Vede tutto                         | manuale                             |
-----------------------|------------------------------------|-------------------------------------|-------------------------------------------
-- _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste
-                      | Crea le proprie verifiche          | didattiche e non perdere dati       | Prove delle funzionalità
-                      | Assegna i voti                     | durante il lavoro                   | Raccolta di feedback
-                      | Vede i report del bot              |                                     |
-----------------------|------------------------------------|-------------------------------------|-------------------------------------------
-- _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste
-                      | Svolgere le verifiche              | usare il sistema anche da tel.,     | Collaudo con studenti del primo anno
-                      | Consultare i voti                  | completare le verifiche e poter     |
-                      | Vede i report del bot              | consultare i propri voti            |
-----------------------|------------------------------------|-------------------------------------|-------------------------------------------
-- _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo
-                      |                                    |                                     | Revisione finale alla presentazione
-----------------------|------------------------------------|-------------------------------------|-------------------------------------------
+| Stakeholder          | Cosa fa                            | Cosa gli interessa                  | Come lo coinvolgo                         |
+|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
+|- _Direttore_         | Crea utenti per docenti e studenti | Avere dati corretti e aggiornati,   | Intervista iniziale                       |
+|                      | Crea classi                        | controllare l’organizzazione        | Revisione dei requisiti                   |
+|                      | Compone classi                     | scolastica e ridurre il lavoro      | Collaudo                                  |
+|                      | Vede tutto                         | manuale                             |                                           |
+|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
+|- _Docenti_           | Carica materiale didattico         | Utilizzare rapidamente le funzioni  | Interviste                                |
+|                      | Crea le proprie verifiche          | didattiche e non perdere dati       | Prove delle funzionalità                  |
+|                      | Assegna i voti                     | durante il lavoro                   | Raccolta di feedback                      |
+|                      | Vede i report del bot              |                                     |                                           |
+|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
+|- _Studenti_          | Consultare il materiale scolastico | Trovare facilmente i contenuti,     | Interviste                                |
+|                      | Svolgere le verifiche              | usare il sistema anche da tel.,     | Collaudo con studenti del primo anno      |
+|                      | Consultare i voti                  | completare le verifiche e poter     |                                           |
+|                      | Vede i report del bot              | consultare i propri voti            |                                           |
+|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
+|- _Docente del corso_ | Validare il PRD e il progetto      |                                     | Raccolta di feedback durante lo sviluppo  |
+|                      |                                    |                                     | Revisione finale alla presentazione       |
+|----------------------|------------------------------------|-------------------------------------|-------------------------------------------|
 
 
 ## Destinatari e contesto d'uso ##
@@ -186,3 +186,65 @@ ID            | Archetipo   | Contesto d'uso                                    
               |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
               |             | e fare le verifiche                                            |                                                                 |                         |                          |
 --------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+
+## Panoramica e casi d'uso ##
+_ScuolaChill in poche righe_
+| ScuolaChill è una piattaforma scolastica che raccoglie in un unico ambiente le attività principali di direzione, docenti e studenti. Il Direttore può creare gli account, organizzare le classi 
+  e consultare i dati dell’istituto. I docenti possono distribuire materiale didattico, preparare verifiche e assegnare voti. Gli studenti possono consultare i materiali, svolgere le verifiche e 
+  controllare i propri risultati. Ogni utente visualizza solamente le informazioni e le funzionalità consentite dal proprio ruolo. 
+  L’interfaccia è progettata per essere semplice da utilizzare sia da computer sia da smartphone.
+_User flow e scenari_
+| _DIR-03 · Creare e comporre una classe_
+  - User flow
+    1. Il Direttore accede a ScuolaChill.
+    2. Apre la sezione dedicata alle classi.
+    3. Seleziona la funzione per creare una nuova classe.
+    4. Inserisce il nome della classe e l’anno scolastico.
+    5. Seleziona gli studenti da inserire nella classe.
+    6. Associa alla classe i docenti e le rispettive materie.
+    7. Controlla i dati inseriti.
+    8. Conferma la creazione.
+    9. Il sistema salva la classe e mostra un messaggio di conferma.
+  - Scenario principale. 
+    Prima dell’inizio dell’anno scolastico, il Direttore deve creare la classe 1A. Inserisce il nome e l’anno scolastico, seleziona gli studenti iscritti e associa i docenti alle rispettive materie. Dopo aver controllato i dati, conferma l’operazione. Il sistema crea la classe e la rende visibile agli utenti interessati.
+  - Scenari alternativi.
+    | Se esiste già una classe con lo stesso nome nello stesso anno scolastico, il sistema impedisce la creazione e segnala il problema.
+    | Se uno studente appartiene già a un’altra classe, il sistema chiede al Direttore se desidera trasferirlo.
+    | Se mancano dati obbligatori, il sistema indica i campi da completare.
+    | Se il salvataggio non riesce, nessuna modifica parziale viene applicata e il Direttore può riprovare.
+| _DOC-02 · Creare e pubblicare una verifica_
+  - User flow
+    1. Il docente accede a ScuolaChill.
+    2. Apre la sezione dedicata alle verifiche.
+    3. Seleziona la funzione per creare una nuova verifica.
+    4. Inserisce il titolo, le istruzioni e le domande.
+    5. Seleziona la classe destinataria.
+    6. Imposta la data di apertura e la scadenza.
+    7. Salva la verifica come bozza.
+    8. Controlla il contenuto e pubblica la verifica.
+    9. Il sistema rende la verifica disponibile agli studenti nel periodo stabilito.
+  - Scenario principale. 
+    Il docente deve preparare una verifica per la propria classe. Inserisce le domande, seleziona la classe destinataria e stabilisce il periodo nel quale la verifica potrà essere svolta. Dopo aver controllato il contenuto, pubblica la verifica. Gli studenti potranno visualizzarla e svolgerla dalla data di apertura fino alla scadenza.
+  - Scenari alternativi.
+    | Se mancano il titolo, le domande o la classe destinataria, il sistema impedisce la pubblicazione e indica i dati mancanti.
+    | Se la scadenza è precedente alla data di apertura, il sistema richiede di correggere le date.
+    | Se il docente non insegna nella classe selezionata, il sistema non consente di assegnarle la verifica.
+    | Se almeno uno studente ha già iniziato la verifica, il docente non può modificare le domande o il punteggio, ma può correggere solamente le informazioni che non alterano lo svolgimento.
+| _STU-02 · Svolgere e consegnare una verifica_
+  - User flow
+    1. Lo studente accede a ScuolaChill.
+    2. Apre la sezione dedicata alle verifiche.
+    3. Seleziona una verifica disponibile.
+    4. Legge le istruzioni e avvia il tentativo.
+    5. Compila le risposte.
+    6. Controlla le risposte inserite.
+    7. Seleziona la funzione per consegnare.
+    8. Conferma la consegna.
+    9. Il sistema registra la verifica e mostra una conferma allo studente.
+  - Scenario principale. 
+  Durante una lezione, lo studente apre la verifica assegnata dal docente, legge le istruzioni e risponde alle domande. Dopo aver controllato le risposte, conferma la consegna entro il tempo disponibile. Il sistema registra la verifica e mostra data e ora dell’avvenuta consegna.
+  - Scenari alternativi.
+    | Se la connessione si interrompe, le risposte già salvate vengono conservate e lo studente può riprendere la verifica quando la connessione torna disponibile.
+    | Se la scadenza viene raggiunta durante lo svolgimento, il sistema salva e consegna automaticamente le risposte presenti.
+    | Se lo studente prova ad aprire la verifica prima della data prevista o dopo la scadenza, il sistema non consente di iniziarla.
+    | Dopo la consegna, lo studente non può modificare le risposte né iniziare un secondo tentativo.
