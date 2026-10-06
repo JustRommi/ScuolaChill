@@ -343,8 +343,6 @@ Se il servizio email non risponde, l’account viene comunque creato.
 Il sistema informa il Direttore che l’invio non è riuscito e mette a disposizione un comando per riprovare manualmente.
 Motivazione: un problema del servizio email non deve obbligare il Direttore a creare nuovamente l’account.
 
-(Altra decisione individuata dal team)
-
 _FR-VER-03 - Numero di tentativi_ (collegato a STU-02)
 Ogni studente può effettuare un solo tentativo per ciascuna verifica. 
 Dopo la consegna, le risposte non possono più essere modificate.
