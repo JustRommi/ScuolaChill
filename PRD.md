@@ -105,13 +105,16 @@ Stato: Bozza
 
 ## Scopo e perimetro ##
 - _Perchè esiste?_
+
 | Lato business: 
     ScuolaChill è un gestionale scolastico pensato per semplificare le attività quotidiane di direzione, docenti e studenti. 
     Riunisce in un’unica piattaforma la gestione degli utenti e delle classi, la distribuzione del materiale didattico, lo svolgimento delle verifiche e la consultazione dei voti
+
 | Lato tecnico: 
     Il sistema comprende un’applicazione web accessibile da computer e smartphone, attraverso la quale gli utenti autenticati possono utilizzare funzionalità differenti in base al proprio ruolo. 
     Il sistema gestisce utenti, classi, materiali didattici, verifiche e voti, garantendo sicurezza, semplicità d’uso e affidabilità
     È stato ovviamente anche preso in considerazione l'utilizzo da persone inesperte o con qualche disabilità.
+
 - _Cosa è incluso?_ 
     Creazione e gestione degli account di docenti e studenti da parte del Direttore.
     Creazione delle classi e assegnazione degli studenti alle classi.
@@ -123,6 +126,7 @@ Stato: Bozza
     Consultazione dei propri voti da parte degli studenti.
     Gestione dell’autenticazione e delle autorizzazioni in base al ruolo.
     Interfaccia web utilizzabile da computer e smartphone.
+
 - _Cosa non è incluso?_
     Gestione delle assenze, dei ritardi e delle giustificazioni. (da vedere in corso d'opera)
     Comunicazioni con le famiglie.
@@ -252,3 +256,86 @@ _User flow e scenari_
     | Se la scadenza viene raggiunta durante lo svolgimento, il sistema salva e consegna automaticamente le risposte presenti.
     | Se lo studente prova ad aprire la verifica prima della data prevista o dopo la scadenza, il sistema non consente di iniziarla.
     | Dopo la consegna, lo studente non può modificare le risposte né iniziare un secondo tentativo.
+
+## Le user story della traccia ## 
+|ID | Storia | AC aggiunti dal team | Note |
+|DIR-01|Creare account docente|Dato che il Direttore sta creando un docente, quando inserisce un’email già registrata, allora il sistema impedisce la creazione del duplicato.|Nome, cognome ed email sono obbligatori.|
+|      |                      |Dato che l’account è stato creato, quando l’invio delle credenziali fallisce, allora il Direttore può ripetere l’invio senza ricreare l’account.|L’email deve essere univoca|
+|      |                      |
+|DIR-02|Creare account studente|Dato che il Direttore sta creando uno studente, quando inserisce un’email già registrata, allora il sistema impedisce la creazione del duplicato.|L’assegnazione alla classe può essere completata in un secondo momento|
+|      |                      |Dato che la classe non è ancora stata stabilita, quando il Direttore crea l’account, allora può lasciare temporaneamente lo studente senza classe.|  
+
+L’assegnazione alla classe può essere completata in un secondo momento.
+
+DIR-03
+
+Creare classi e comporle
+
+Dato che esiste già una classe con lo stesso nome nello stesso anno scolastico, quando il Direttore prova a crearne un’altra, allora il sistema blocca l’operazione.
+Dato che uno studente appartiene già a una classe, quando viene inserito in una nuova classe, allora il sistema richiede la conferma del trasferimento.
+
+Ogni studente può appartenere a una sola classe nello stesso anno scolastico.
+
+DIR-04
+
+Vedere tutto
+
+Dato che il Direttore ha effettuato l’accesso, quando consulta la dashboard, allora può visualizzare classi, docenti, studenti, verifiche e voti.
+Dato che sono presenti molti risultati, quando apre un elenco, allora può filtrarlo e visualizzarlo in pagine.
+
+Il Direttore può consultare tutti i dati, ma le informazioni sensibili devono essere mostrate solo quando necessarie.
+
+DOC-01
+
+Caricare materiale didattico
+
+Dato che il docente insegna in una classe, quando carica un materiale valido, allora questo diventa visibile agli studenti della classe.
+Dato che il file supera la dimensione massima o ha un formato non consentito, quando il docente tenta il caricamento, allora il sistema rifiuta il file e mostra il motivo.
+
+Il docente può gestire materiali solamente per le proprie classi e materie.
+
+DOC-02
+
+Creare le proprie verifiche
+
+Dato che il docente sta preparando una verifica, quando mancano titolo, domande o classe destinataria, allora il sistema permette di salvarla come bozza ma non di pubblicarla.
+Dato che almeno uno studente ha iniziato la verifica, quando il docente tenta di modificare domande o punteggi, allora il sistema impedisce la modifica.
+
+La data di scadenza deve essere successiva alla data di apertura.
+
+DOC-03
+
+Assegnare i voti
+
+Dato che il docente sta correggendo una verifica, quando inserisce un voto non valido, allora il sistema impedisce il salvataggio.
+Dato che un voto è già stato pubblicato, quando il docente lo modifica, allora il sistema registra la nuova valutazione e la data della modifica.
+
+Il voto segue la scala definita nei requisiti funzionali. Un voto non pubblicato non è visibile allo studente.
+
+STU-01
+
+Consultare il materiale didattico
+
+Dato che lo studente appartiene a una classe, quando apre la sezione dei materiali, allora visualizza solamente quelli destinati alla propria classe.
+Dato che un materiale non è più disponibile, quando lo studente tenta di aprirlo, allora il sistema mostra un messaggio comprensibile.
+
+I materiali possono essere filtrati per materia e ordinati per data di pubblicazione.
+
+STU-02
+
+Svolgere una verifica
+
+Dato che lo studente sta svolgendo una verifica, quando la connessione si interrompe, allora le risposte già salvate vengono conservate.
+Dato che viene raggiunta la scadenza, quando la verifica è ancora aperta, allora il sistema consegna automaticamente le risposte presenti.
+Dato che la verifica è già stata consegnata, quando lo studente prova a riaprirla, allora non può modificare le risposte.
+
+È consentito un solo tentativo. Durante lo svolgimento le risposte vengono salvate automaticamente.
+
+STU-03
+
+Consultare i propri voti
+
+Dato che il docente ha pubblicato un voto, quando lo studente apre la sezione delle valutazioni, allora può visualizzare voto, materia, verifica, data ed eventuale commento.
+Dato che un voto non è ancora stato pubblicato, quando lo studente consulta le valutazioni, allora il voto non viene mostrato.
+
+Lo studente può consultare esclusivamente i propri voti. I risultati possono essere filtrati per materia.
