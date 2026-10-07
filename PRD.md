@@ -126,7 +126,6 @@ Stato: Bozza
     Consultazione dei propri voti da parte degli studenti.
     Gestione dell’autenticazione e delle autorizzazioni in base al ruolo.
     Interfaccia web utilizzabile da computer e smartphone.
-
 - _Cosa non è incluso?_
     Gestione delle assenze, dei ritardi e delle giustificazioni. (da vedere in corso d'opera)
     Comunicazioni con le famiglie.
@@ -373,3 +372,12 @@ _Assunzioni_
 | ASS-02   | Gli utenti hanno a disposizione dispositivi aggiornati e funzionanti | Alcune funzioni potrebbero essere inutilizzabili |
 | ASS-03   | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
 | ASS-04   | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
+
+_vincoli_
+
+| ID       | Vincolo | Da dove viene |
+|----------|---------|---------------|
+| VIN-01   | Il budget cloud è quello dei crediti studente | Traccia del progetto |
+| VIN-02   | Paginazione obbligatoria degli elenchi | Traccia del progetto |
+| VIN-03   | Formato uniforme delle risposte di errore delle API | Traccia del progetto|
+| VIN-04   | Ambiente dello sviluppo separato da quello della produzione | Traccia del progetto |
