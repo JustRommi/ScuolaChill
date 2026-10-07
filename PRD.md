@@ -373,10 +373,17 @@ _Assunzioni_
 | ASS-03   | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
 | ASS-04   | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
 
-_vincoli_
+_Vincoli_
 
 | ID       | Vincolo | Da dove viene |
 |----------|---------|---------------|
 | VIN-02   | Paginazione obbligatoria degli elenchi | Traccia del progetto |
 | VIN-03   | Formato uniforme delle risposte di errore delle API | Traccia del progetto|
 | VIN-04   | Ambiente dello sviluppo separato da quello della produzione | Traccia del progetto |
+
+_Dipendenze_
+
+| ID       | Dipendenza | Serve entro | 
+| DIP-01   | Account attivo sul servizio email per inviare le credenziali | Prima del collaudo |
+| DIP-02   | Account e permessi sulla piattaforma di hosting | Prima del primo deploy |
+| DIP-03   | Disponibilità di studenti e docenti per i test | Prima del collaudo |
