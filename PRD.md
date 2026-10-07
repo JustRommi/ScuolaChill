@@ -163,13 +163,12 @@ _User flow e scenari_
 ## Le user story della traccia ## 
 | ID     | Storia                  | AC aggiunti dal team                                                                     | Note                                       |
 |--------|-------------------------|------------------------------------------------------------------------------------------|--------------------------------------------|
-|DIR-01  | Creare account docente  | Dato che il Direttore sta creando un docente, quando inserisce un’email già registrata,  | Nome, cognome ed email sono obbligatori,   |
-|        |                         | allora il sistema impedisce la creazione del duplicato.                                  | L’email deve essere univoca                | 
-|        |                         | Dato che l’account è stato creato, quando l’invio delle credenziali fallisce, allora     |                                            |
-|        |                         | il Direttore può ripetere l’invio senza ricreare l’account.                              |                                            |
+|DIR-01  | Creare account docente  | Dato che il Direttore sta creando un docente, quando inserisce un’email già registrata, allora il sistema impedisce la creazione del duplicato. | Nome, cognome ed email sono obbligatori |
+|        |                         |                                                                                          | L’email deve essere univoca | 
+|        |                         | Dato che l’account è stato creato, quando l’invio delle credenziali fallisce, allora il Direttore può ripetere l’invio senza ricreare l’account. |  |
 | - - - -| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -| - - - - - - - - - - - - - - - - - - - - - -|
-|DIR-02  | Creare account studente | Dato che il Direttore sta creando uno studente, quando inserisce un’email già registrata,| L’assegnazione alla classe può essere      |
-|        |                         | allora il sistema impedisce la creazione del duplicato.                                  | completata in un secondo momento           |
+|DIR-02  | Creare account studente | Dato che il Direttore sta creando uno studente, quando inserisce un’email già registrata,| L’assegnazione alla classe può essere completata in un secondo momento |
+|        |                         | allora il sistema impedisce la creazione del duplicato.                                  |            |
 |        |                         | Dato che la classe non è ancora stata stabilita, quando il Direttore crea l’account,     |                                            |
 |        |                         | allora può lasciare temporaneamente lo studente senza classe.                            |                                            |
 | - - - -| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -| - - - - - - - - - - - - - - - - - - - - - -|
