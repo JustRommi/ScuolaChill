@@ -94,7 +94,7 @@ E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.1.1
+Versione: 1.1.2
 Data: 23.09.2026
 Stato: Bozza
 
@@ -175,18 +175,17 @@ Stress test	300+: 500+
 
 
 ## Archetipi ##
-|ID            | Archetipo   | Contesto d'uso                                                 | Competenze digitali                                             | Dispositivo principale  | Frequenza d'uso          |
-|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
-|  _ARC-001_   | Direttore   | Usa il registro per consultare, creare, modificare o eliminare | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Quotidianamente durante  |
-|              |             | dati e informazioni relativi a classi, docenti e studenti      | competenze avanzate nella comprensione dei dati e informazioni, |                         | l'orario scolastico      |
-|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| 
-|  _ARC-002_   | Docente     | Usa il registro per monitorare l'andamento degli studenti,     | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico     | Più volte durante la     | 
-|              |             | gestire le verifiche e i vari momenti relativi alle lezioni    | competenze avanzate nella comprensione dei dati e informazioni, |                         | giornata scolastica      |
-|              |             |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
-|--------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
-|  _ARC-003_   | Studente    | Usa il registro per monitorare il proprio andamento,           | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le   |
-|              |             | consultare i dati relativi a orari scolastici, visualizzare    | competenze base nella comprensione dei dati e informazioni      | Telefono personale      | lezioni e da casa        |
-|              |             | e fare le verifiche                                            |                                                                 |                         |                          |
+|ID            | Archetipo   | Contesto d'uso  | Competenze digitali  | Dispositivo principale  | Frequenza d'uso          |
+|--------------|-------------|-----------------|----------------------|-------------------------|--------------------------|
+|  _ARC-001_   | Direttore | Usa il registro per consultare, creare, modificare o eliminare dati e informazioni relativi a classi, docenti e studenti | Competenze base nell'utilizzo di un gestionale, competenze avanzate nella comprensione dei dati e informazioni                 | Computer scolastico     | Quotidianamente durante l'orario scolastico |
+|--------------|---------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| 
+|  _ARC-002_   | Docente | Usa il registro per monitorare l'andamento degli studenti, gestire le verifiche e i vari momenti relativi alle lezioni    | Competenze base nell'utilizzo di un gestionale,  | Computer scolastico     | Più volte durante la giornata scolastica    |
+|              |    |     | competenze avanzate nella comprensione dei dati e informazioni, |                         |       |
+|              |    |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
+|--------------|----|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
+|  _ARC-003_   | Studente    | Usa il registro per monitorare il proprio andamento, consultare i dati relativi a orari scolastici, visualizzare e fare le verifiche          | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le lezioni e da casa  |
+|              |             |     | competenze base nella comprensione dei dati e informazioni      | Telefono personale      |         |
+
 
 ## Panoramica e casi d'uso ##
 _ScuolaChill in poche righe_
@@ -255,6 +254,7 @@ _User flow e scenari_
     | Se lo studente prova ad aprire la verifica prima della data prevista o dopo la scadenza, il sistema non consente di iniziarla.
     | Dopo la consegna, lo studente non può modificare le risposte né iniziare un secondo tentativo.
 
+
 ## Le user story della traccia ## 
 | ID     | Storia                  | AC aggiunti dal team                                                                     | Note                                       |
 |--------|-------------------------|------------------------------------------------------------------------------------------|--------------------------------------------|
@@ -311,6 +311,7 @@ _User flow e scenari_
 |        |                         | valutazioni, allora il voto non viene mostrato.                                          | materia.                                   |
 |--------|-------------------------|------------------------------------------------------------------------------------------|--------------------------------------------|
 
+
 ## Le decisioni lasciate aperte dalla traccia ##
 
 _FR-VOT-01 - scala dei voti_ (collegato a DOC-03 e STU-03)
@@ -347,3 +348,15 @@ _FR-VER-03 - Numero di tentativi_ (collegato a STU-02)
 Ogni studente può effettuare un solo tentativo per ciascuna verifica. 
 Dopo la consegna, le risposte non possono più essere modificate.
 Motivazione: la regola è semplice da comprendere e garantisce le stesse condizioni a tutti gli studenti.
+
+
+## Requisiti non funzionali ##
+| ID       | Famiglia     | Requisito                             | Soglia e condizione                                                     | Come si verifica             | Storie collegate |
+| _NFR-01_ | Prestazioni  | Apertura della verifica nel picco     | Meno di 2s per il 95% delle richieste, 75 utenti nello stesso minuto    | Test di carico               | STU-02           |
+| _NFR-02_ | Sicurezza    | Protezione degli accessi              | il 100% delle richieste fatte senza aver fatto il login viene bloccato  | Test del login               | DIR-01, DOC-03   |
+| _NFR-03_ | Usabilità    | Facilità di consultazione dei voti    | Almeno 4 studenti su 5 trovano i propri voti entro 30s, senza aiuti     | Test con utenti              | STU-03           |
+| _NFR-04_ | Disponibilità| Accessibilità durante le lezioni      | Dispobibilità mensile del 100% circa nei feriali, dalle 8 alle 13       | Monitoraggio del servizio    | DOC-02, STU-02   |
+| _NFR-05_ | Ambientale   | Separazione sviluppo-produzione       | Dev e Prod usano database e credenziali differenti                      | Controllo configurazioni     | DIR-01, DIR-02   |
+| _NFR-06_ | Supporto     | Tracciabilità degli errori            | il 100% degli errori del server vengono identificati e registrati       | Simulazione errori e log     | DOC-01, STU-02   |
+| _NFR-07_ | Interazione  | Uniformità degli errori API           | il 100% degli errori hanno campi comuni (codice e messaggio)            | Test delle API               | DOC-01, DOC-03   |
+| _NFR-08_ | Conformità   | Documentazione delle API              | Ogni API è documentata nell'apposito documento                          | Confronto API-documentazione | DOC-01, DOC-03   |
