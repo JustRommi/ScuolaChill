@@ -257,6 +257,7 @@ Motivazione: la regola è semplice da comprendere e garantisce le stesse condizi
 
 ## Requisiti non funzionali ##
 | ID       | Famiglia     | Requisito                             | Soglia e condizione                                                     | Come si verifica             | Storie collegate |
+|----------|--------------|---------------------------------------|-------------------------------------------------------------------------|------------------------------|------------------|
 | _NFR-01_ | Prestazioni  | Apertura della verifica nel picco     | Meno di 3s per il 95% delle richieste, 100 utenti nello stesso minuto   | Test di carico               | STU-02           |
 | _NFR-02_ | Sicurezza    | Protezione degli accessi              | il 100% delle richieste fatte senza aver fatto il login viene bloccato  | Test del login               | DIR-01, DOC-03   |
 | _NFR-03_ | Usabilità    | Facilità di consultazione dei voti    | Almeno 4 studenti su 5 trovano i propri voti entro 30s, senza aiuti     | Test con utenti              | STU-03           |
