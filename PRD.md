@@ -1,69 +1,8 @@
-Stack di sviluppo:
-
-Infrastruttura Cloud:
-
-Dimensionamento:
-
-
-
-### Fondamenti di architettura
-
-- L'**architettura software** complessiva del sistema e la **suddivisione in componenti**, con un diagramma.
-- La **separazione delle responsabilità** e l'**architettura a livelli**: cosa fa il presentation/API layer, cosa l'application/business layer, cosa il data access layer — riferito al *tuo* gestionale, non in astratto.
-- Le **dipendenze fra i livelli**: chi può conoscere chi, e in quale direzione.
-- Come la struttura scelta riduce l'**accoppiamento** e rende il sistema **testabile**.
-
-### Progettazione e realizzazione delle API
-
-- Le **risorse** esposte dall'API secondo i principi **REST** e la **progettazione delle route**.
-- L'uso corretto di **GET, POST, PUT, PATCH e DELETE**, con **CRUD completo** sulle entità principali.
-- I **codici di stato HTTP** previsti e una strategia **coerente di gestione degli errori** (formato uniforme delle risposte di errore).
-- La **validazione degli input** e la **paginazione** delle collezioni.
-- La documentazione tramite **OpenAPI/Swagger** e il piano di verifica con **Postman** o strumento equivalente.
-
-Nel PRD è sufficiente il **contratto** delle API principali (route, verbi, payload di esempio, codici di risposta): è il contratto che il frontend e i test useranno, quindi scriverlo prima conviene a te.
-
-### Persistenza e modellazione
-
-- Il **modello relazionale**: entità, **relazioni** e cardinalità, con diagramma ER. Il dominio contiene già casi interessanti: uno studente appartiene a una classe, un docente insegna più materie in più classi, un voto lega studente, verifica e docente.
-- La strategia di **accesso ai dati** e l'uso di **query parametrizzate** per prevenire la **SQL injection**.
-- Il **ruolo e la strategia di generazione degli identificatori**.
-- La distinzione fra **modello del database, modello di dominio e rappresentazione esposta dall'API**: non sono la stessa cosa, e il PRD deve mostrare dove differiscono e perché.
-- La **normalizzazione** dei dati e, dove serve, l'**aggregazione di più modelli** in letture denormalizzate — la vista "tutti i voti dello studente per materia" e la dashboard del Direttore sono i candidati naturali.
-
-### Sicurezza e integrazione
-
-- **HTTPS** e la messa in sicurezza del dialogo fra frontend e backend.
-- **Autenticazione e autorizzazione**: come si ottiene un **token**, cosa contiene, come viaggia il **profilo utente**.
-- I tre **ruoli** e il **controllo delle autorizzazioni**: chi può fare cosa, e — soprattutto — dove viene fatto rispettare il controllo (spoiler: mai solo nel frontend).
-- Almeno una **chiamata a un'API esterna dal backend** (per esempio un servizio di invio email per le credenziali, o un servizio di generazione documenti): quale, e come viene gestito il suo fallimento.
-- La **gestione delle configurazioni e degli ambienti**: dove vivono connection string e segreti, e come cambiano fra un ambiente e l'altro.
-
-### Qualità architetturale
-
-- L'**organizzazione del codice**: struttura di progetti/moduli/cartelle e sue motivazioni.
-- **Design Pattern**: dove vengono applicati e a cosa servono nel tuo sistema.
-- La strategia di **testabilità**: cosa verrà testato, come le dipendenze infrastrutturali (database, API esterne) vengono **separate** per poterle sostituire nei test.
-- La configurazione **Development/Production** e le differenze fra i due ambienti.
-- I **principi di deployment dell'applicazione e del database**: come il sistema arriva sul cloud scelto, e come vengono gestite le modifiche allo schema del database nel tempo.
-
-
-## Requisiti trasversali (validi qualunque stack tu scelga)
-
-- Tutto il traffico fra frontend e backend viaggia su **HTTPS**.
-- Ogni operazione delle user story passa da un'**API autenticata**: il controllo dei ruoli sta **nel backend**; il frontend può al massimo nascondere ciò che non è permesso, mai essere l'unica barriera.
-- Le API principali sono **documentate con OpenAPI/Swagger** e coperte da una collezione **Postman** (o equivalente) usata come verifica.
-- Gli elenchi (studenti, materiali, voti) sono **paginati**.
-- Gli errori hanno un **formato uniforme** e codici HTTP coerenti su tutta l'API.
-- L'applicazione gira in almeno due configurazioni, **Development e Production**, senza segreti nel codice sorgente.
-- Il sistema è **deployato sull'infrastruttura cloud scelta** e raggiungibile pubblicamente per il collaudo con i ragazzi del primo anno.
-
-
 ## Informazioni sul documento ##
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
 Autori: _Romano Cappelletto_
-Versione: 1.1.2
+Versione: 1.1.3
 Data: 23.09.2026
 Stato: Bozza
 
@@ -318,10 +257,10 @@ Motivazione: la regola è semplice da comprendere e garantisce le stesse condizi
 
 ## Requisiti non funzionali ##
 | ID       | Famiglia     | Requisito                             | Soglia e condizione                                                     | Come si verifica             | Storie collegate |
-| _NFR-01_ | Prestazioni  | Apertura della verifica nel picco     | Meno di 2s per il 95% delle richieste, 75 utenti nello stesso minuto    | Test di carico               | STU-02           |
+| _NFR-01_ | Prestazioni  | Apertura della verifica nel picco     | Meno di 3s per il 95% delle richieste, 100 utenti nello stesso minuto   | Test di carico               | STU-02           |
 | _NFR-02_ | Sicurezza    | Protezione degli accessi              | il 100% delle richieste fatte senza aver fatto il login viene bloccato  | Test del login               | DIR-01, DOC-03   |
 | _NFR-03_ | Usabilità    | Facilità di consultazione dei voti    | Almeno 4 studenti su 5 trovano i propri voti entro 30s, senza aiuti     | Test con utenti              | STU-03           |
-| _NFR-04_ | Disponibilità| Accessibilità durante le lezioni      | Dispobibilità mensile del 100% circa nei feriali, dalle 8 alle 13       | Monitoraggio del servizio    | DOC-02, STU-02   |
+| _NFR-04_ | Disponibilità| Accessibilità durante le lezioni      | Dispobibilità mensile di almeno 99% nei feriali, dalle 8 alle 13        | Monitoraggio del servizio    | DOC-02, STU-02   |
 | _NFR-05_ | Ambientale   | Separazione sviluppo-produzione       | Dev e Prod usano database e credenziali differenti                      | Controllo configurazioni     | DIR-01, DIR-02   |
 | _NFR-06_ | Supporto     | Tracciabilità degli errori            | il 100% degli errori del server vengono identificati e registrati       | Simulazione errori e log     | DOC-01, STU-02   |
 | _NFR-07_ | Interazione  | Uniformità degli errori API           | il 100% degli errori hanno campi comuni (codice e messaggio)            | Test delle API               | DOC-01, DOC-03   |
@@ -330,6 +269,9 @@ Motivazione: la regola è semplice da comprendere e garantisce le stesse condizi
 
 ## Requisiti impliciti ##
 
+| Chi ho intervistato | Cosa ha detto | Requisito ricavato |
+|---------------------|---------------|--------------------|
+| Da definire         | Da completare dopo l'intervista | Da definire | 
 
 ## Assunzioni, vincoli e dipendenze ##
 
@@ -337,7 +279,7 @@ _Assunzioni_
 
 | ID       | Assunzione | Cosa succede se è falsa |
 |----------|------------|-------------------------|
-| ASS-01   | Non più di 75 studenti aprono una verifica nello stesso minuto | Vanno rivisti il dimensionamento e il carico |
+| ASS-01   | Non più di 100 studenti aprono una verifica nello stesso minuto | Vanno rivisti il dimensionamento e il carico |
 | ASS-02   | Gli utenti hanno a disposizione dispositivi aggiornati e funzionanti | Alcune funzioni potrebbero essere inutilizzabili |
 | ASS-03   | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
 | ASS-04   | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
@@ -369,12 +311,37 @@ _Dipendenze_
 | **ITS Digital Academy – singola classe**            |   max 25 |                   n.d. |            n.d. |
 | **ITS Digital Academy – 2 annualità contemporanee** |  max ~50 |                   n.d. |            n.d. |
 |                                                     |          |                        |                 |
-| Tipologia per il progetto                           |     1050 |                    120 |               10|
+| Tipologia per il progetto                           |      500 |                     25 |   1 (direttore) |
 
 _Utenti concorrenti_
 
 | Situazione     | Utenti concorrenti | Da dove viene il numero |
 |----------------|--------------------|-------------------------|
-| Uso normale durante la giornata | 430 | un 30% degli studenti e tutti i docenti e personale |
-| Picco (orario verifica) | 230 | 10 classi su 50, docenti che le fanno e personale |
-| Fine quadrimestre (voti) | 1180 | Tutti gli studenti, docenti e personale |
+| Uso normale durante la giornata | 75 | Circa 50 studenti, 24 docenti e il Direttore |
+| Picco (orario verifica) | 100 | Circa quattro classi impegnate nelle verifiche, i relativi docenti e altri utenti collegati |
+| Fine quadrimestre (voti) | 425 | Docenti che inseriscono i voti e studenti che consultano i risultati |
+
+_Profilo di carico_
+
+| Operazione | Frequente? | Pesante? | Critica? | Note |
+|------------|------------|----------|----------|------|
+| Login      | Si         | No       | Si       | Le richieste aumentano all’inizio delle lezioni e subito dopo la pubblicazione dei voti. Se il login non funziona, nessun utente può accedere alle altre funzioni. |
+| Apertura verifica | Si durante le verifiche | Media | Si | Fino a circa 100 utenti possono aprire una verifica nello stesso intervallo. Devono essere caricati domande, istruzioni e risposte già salvate. |
+| Salvataggio delle risposte | Si durante le verifiche | Media | Si | Produce numerose scritture sul database. Il sistema deve evitare la perdita o la duplicazione delle risposte. |
+| Consegna verifica | Concentrata alla scadenza | Media | Si | Molti studenti possono consegnare quasi nello stesso momento. Ogni consegna deve essere registrata una sola volta. | 
+| Consultazione dei voti | Molto frequente a fine quadrimestre | No | Si | Può coinvolgere circa 425 utenti concorrenti. Si tratta principalmente di operazioni di lettura. |
+| Dashboard del direttore | Poco frequente | Media | No | Riunisce dati provenienti da studenti, classi, docenti, verifiche e voti, ma viene utilizzata da un solo ruolo. |
+| Caricamento materiale | Regolare | Si | No | I file possono essere più pesanti delle normali richieste. Il numero di caricamenti contemporanei dovrebbe comunque essere limitato. |
+
+
+## Scelte tecnologiche ##
+
+| Area | Scelta | Alternativa considerata | Perchè ho scelto così |
+|------|--------|-------------------------|-----------------------|
+| Backend | Node.js con Express | Java con Spring Boot | Permette di usare JS sia nel frontend che backend, è semplice e adatto alla creazione di API REST |
+| Frontend | React con Vite | Angular | Sto studiando React in classe con il professore e mi sta piacendo molto. Ho quindi deciso di mettermi alla prova utilizzandolo come framework principale per il frontend |
+| Database | PostgreSQL | MongoDB | I dati di ScuolaChill hanno molte relazioni tra studenti, classi, docenti, verifiche e voti. PostgreSQL permette di gestirle in modo ordinato e coerente. |
+| Provider Cloud | Microsoft Azure | Amazon Web Services | Offre servizi gestiti per pubblicare frontend, backend, database e file senza dover configurare manualmente un server. |
+| Azure App Service, Azure Static Web Apps, Azure Database for PostgreSQL e Azure Blob Storage | Un'unica macchina virtuale | Questi servizi separano i componenti e riducono le attività di installazione, aggiornamento e manutenzione. |
+| Regione | Italy North | West Europe | È vicina agli utenti previsti e permette di mantenere i principali dati dell’applicazione in Italia. |
+| Servizio esterno | API brevo | SendGrid | Permette al backend di inviare tramite email le credenziali di accesso agli studenti |
