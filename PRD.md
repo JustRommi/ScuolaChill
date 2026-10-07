@@ -367,9 +367,9 @@ Motivazione: la regola è semplice da comprendere e garantisce le stesse condizi
 
 _Assunzioni_
 
-| ID     | Assunzione | Cosa succede se è falsa |
-|--------|------------|-------------------------|
-| ASS-01 | Non più di 75 studenti aprono una verifica nello stesso minuto | Vanno rivisti il dimensionamento e il carico |
-| ASS-02 | Gli utenti hanno a disposizione dispositivi aggiornati e funzionanti | Alcune funzioni potrebbero essere inutilizzabili |
-| ASS-03 | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
-| ASS-04 | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
+| ID       | Assunzione | Cosa succede se è falsa |
+|----------|------------|-------------------------|
+| ASS-01   | Non più di 75 studenti aprono una verifica nello stesso minuto | Vanno rivisti il dimensionamento e il carico |
+| ASS-02   | Gli utenti hanno a disposizione dispositivi aggiornati e funzionanti | Alcune funzioni potrebbero essere inutilizzabili |
+| ASS-03   | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
+| ASS-04   | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
