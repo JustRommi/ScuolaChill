@@ -59,37 +59,6 @@ Nel PRD è sufficiente il **contratto** delle API principali (route, verbi, payl
 - Il sistema è **deployato sull'infrastruttura cloud scelta** e raggiungibile pubblicamente per il collaudo con i ragazzi del primo anno.
 
 
-## DIMENSIONAMENTO:
-
-| Tipologia                                           | Studenti | Professori / formatori | Altro personale |
-| --------------------------------------------------- | -------: | ---------------------: | --------------: |
-| **Scuola statale italiana media**                   |     ~947 |     ~119 posti docente |            n.d. |
-| **Secondaria di II grado media**                    |   ~1.014 |                   n.d. |            n.d. |
-| **SFP Don Bosco San Donà – 2024/25**                |  413–423 |                     21 |              12 |
-| **ITS Digital Academy – singola classe**            |   max 25 |                   n.d. |            n.d. |
-| **ITS Digital Academy – 2 annualità contemporanee** |  max ~50 |                   n.d. |            n.d. |
-
-|Tipologia per il progetto                            |     1050 |                    120 |               10|
-
-Per il progetto userei **due scenari** distinti, così il dimensionamento resta leggibile:
-
-Scenario	Studenti	Professori	Personale non docente	Utenti totali stimati
-Don Bosco – utilizzo realistico	400–600	15–30	10–15	425–645
-Target di progetto – con margine di crescita	1.050	120	10	1.180
-
-Il secondo scenario è utile come riferimento tecnico perché ti permette di progettare il sistema per una scuola più grande del Don Bosco attuale, senza sovradimensionarlo in modo assurdo.
-
-Per il Don Bosco, come valori centrali da usare nei calcoli, potremmo fissare:
-
-Voce	Valore di riferimento
-Studenti	500
-Professori	25
-Personale	15
-Totale utenti	540
-
-E tenere ~1.200 utenti registrati come requisito massimo iniziale di progetto.
-
-
 ## Informazioni sul documento ##
 Prodotto: ScuolaChill
 Team: _Romanov Industries_
@@ -388,3 +357,24 @@ _Dipendenze_
 | DIP-01   | Account attivo sul servizio email per inviare le credenziali | Prima del collaudo |
 | DIP-02   | Account e permessi sulla piattaforma di hosting | Prima del primo deploy |
 | DIP-03   | Disponibilità di studenti e docenti per i test | Prima del collaudo |
+
+
+## Stima del carico ##
+
+| Tipologia                                           | Studenti | Professori / formatori | Altro personale |
+| --------------------------------------------------- | -------: | ---------------------: | --------------: |
+| **Scuola statale italiana media**                   |     ~947 |     ~119 posti docente |            n.d. |
+| **Secondaria di II grado media**                    |   ~1.014 |                   n.d. |            n.d. |
+| **SFP Don Bosco San Donà – 2024/25**                |  413–423 |                     21 |              12 |
+| **ITS Digital Academy – singola classe**            |   max 25 |                   n.d. |            n.d. |
+| **ITS Digital Academy – 2 annualità contemporanee** |  max ~50 |                   n.d. |            n.d. |
+|                                                     |          |                        |                 |
+| Tipologia per il progetto                           |     1050 |                    120 |               10|
+
+_Utenti concorrenti_
+
+| Situazione     | Utenti concorrenti | Da dove viene il numero |
+|----------------|--------------------|-------------------------|
+| Uso normale durante la giornata | 430 | un 30% degli studenti e tutti i docenti e personale |
+| Picco (orario verifica) | 230 | 10 classi su 50, docenti che le fanno e personale |
+| Fine quadrimestre (voti) | 1180 | Tutti gli studenti, docenti e personale |
