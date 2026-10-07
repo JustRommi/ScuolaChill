@@ -377,7 +377,6 @@ _vincoli_
 
 | ID       | Vincolo | Da dove viene |
 |----------|---------|---------------|
-| VIN-01   | Il budget cloud è quello dei crediti studente | Traccia del progetto |
 | VIN-02   | Paginazione obbligatoria degli elenchi | Traccia del progetto |
 | VIN-03   | Formato uniforme delle risposte di errore delle API | Traccia del progetto|
 | VIN-04   | Ambiente dello sviluppo separato da quello della produzione | Traccia del progetto |
