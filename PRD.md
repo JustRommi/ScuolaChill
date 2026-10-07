@@ -342,6 +342,6 @@ _Profilo di carico_
 | Frontend | React con Vite | Angular | Sto studiando React in classe con il professore e mi sta piacendo molto. Ho quindi deciso di mettermi alla prova utilizzandolo come framework principale per il frontend |
 | Database | PostgreSQL | MongoDB | I dati di ScuolaChill hanno molte relazioni tra studenti, classi, docenti, verifiche e voti. PostgreSQL permette di gestirle in modo ordinato e coerente. |
 | Provider Cloud | Microsoft Azure | Amazon Web Services | Offre servizi gestiti per pubblicare frontend, backend, database e file senza dover configurare manualmente un server. |
-| Azure App Service, Azure Static Web Apps, Azure Database for PostgreSQL e Azure Blob Storage | Un'unica macchina virtuale | Questi servizi separano i componenti e riducono le attività di installazione, aggiornamento e manutenzione. |
+| Servizi Cloud | Azure App Service, Azure Static Web Apps, Azure Database for PostgreSQL e Azure Blob Storage | Un'unica macchina virtuale | Questi servizi separano i componenti e riducono le attività di installazione, aggiornamento e manutenzione. |
 | Regione | Italy North | West Europe | È vicina agli utenti previsti e permette di mantenere i principali dati dell’applicazione in Italia. |
 | Servizio esterno | API brevo | SendGrid | Permette al backend di inviare tramite email le credenziali di accesso agli studenti |
