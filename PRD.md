@@ -178,11 +178,9 @@ Stress test	300+: 500+
 |ID            | Archetipo   | Contesto d'uso  | Competenze digitali  | Dispositivo principale  | Frequenza d'uso          |
 |--------------|-------------|-----------------|----------------------|-------------------------|--------------------------|
 |  _ARC-001_   | Direttore | Usa il registro per consultare, creare, modificare o eliminare dati e informazioni relativi a classi, docenti e studenti | Competenze base nell'utilizzo di un gestionale, competenze avanzate nella comprensione dei dati e informazioni                 | Computer scolastico     | Quotidianamente durante l'orario scolastico |
-|--------------|---------|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------| 
 |  _ARC-002_   | Docente | Usa il registro per monitorare l'andamento degli studenti, gestire le verifiche e i vari momenti relativi alle lezioni    | Competenze base nell'utilizzo di un gestionale,  | Computer scolastico     | Più volte durante la giornata scolastica    |
 |              |    |     | competenze avanzate nella comprensione dei dati e informazioni, |                         |       |
 |              |    |                                                                | competenze base nella creazione e gestione di verifiche         |                         |                          |
-|--------------|----|----------------------------------------------------------------|-----------------------------------------------------------------|-------------------------|--------------------------|
 |  _ARC-003_   | Studente    | Usa il registro per monitorare il proprio andamento, consultare i dati relativi a orari scolastici, visualizzare e fare le verifiche          | Competenze base nell'utilizzo di un gestionale,                 | Computer scolastico,    | Quotidiana, durante le lezioni e da casa  |
 |              |             |     | competenze base nella comprensione dei dati e informazioni      | Telefono personale      |         |
 
@@ -360,3 +358,18 @@ Motivazione: la regola è semplice da comprendere e garantisce le stesse condizi
 | _NFR-06_ | Supporto     | Tracciabilità degli errori            | il 100% degli errori del server vengono identificati e registrati       | Simulazione errori e log     | DOC-01, STU-02   |
 | _NFR-07_ | Interazione  | Uniformità degli errori API           | il 100% degli errori hanno campi comuni (codice e messaggio)            | Test delle API               | DOC-01, DOC-03   |
 | _NFR-08_ | Conformità   | Documentazione delle API              | Ogni API è documentata nell'apposito documento                          | Confronto API-documentazione | DOC-01, DOC-03   |
+
+
+## Requisiti impliciti ##
+
+
+## Assunzioni, vincoli e dipendenze ##
+
+_Assunzioni_
+
+| ID     | Assunzione | Cosa succede se è falsa |
+|--------|------------|-------------------------|
+| ASS-01 | Non più di 75 studenti aprono una verifica nello stesso minuto | Vanno rivisti il dimensionamento e il carico |
+| ASS-02 | Gli utenti hanno a disposizione dispositivi aggiornati e funzionanti | Alcune funzioni potrebbero essere inutilizzabili |
+| ASS-03 | La connessione a internet è garantita durante lo svolgimento delle verifiche | Gli studenti potrebbero non finire la verifica entro i tempi previsti |
+| ASS-04 | Docenti e Studenti dispongono di email valide a cui mandare le credenziali | La consegna delle credenziali potrebbe non essere possibile |
