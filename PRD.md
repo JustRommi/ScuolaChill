@@ -384,6 +384,7 @@ _Vincoli_
 _Dipendenze_
 
 | ID       | Dipendenza | Serve entro | 
+|----------|------------|-------------|
 | DIP-01   | Account attivo sul servizio email per inviare le credenziali | Prima del collaudo |
 | DIP-02   | Account e permessi sulla piattaforma di hosting | Prima del primo deploy |
 | DIP-03   | Disponibilità di studenti e docenti per i test | Prima del collaudo |
