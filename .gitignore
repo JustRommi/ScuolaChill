@@ -1,0 +1,9 @@
+# Pagine web salvate dal browser (contengono token di sessione)
+miro/
+*_files/
+saved_resource*.html
+
+# File di sistema
+Thumbs.db
+desktop.ini
+.DS_Store

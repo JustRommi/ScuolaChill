@@ -1,0 +1,15 @@
+services:
+    db:
+        image: postgres:18
+        container_name: scuolachill-db
+        environment:
+            POSTGRES_USER: scuolachill
+            POSTGRES_PASSWORD: chill2026
+            POSTGRES_DB: scuolachill
+        ports:
+            - "5432:5432"
+        volumes:
+            - scuolachill-data:/var/lib/postgresql
+
+volumes:
+    scuolachill-data:
